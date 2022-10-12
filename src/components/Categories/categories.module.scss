@@ -1,0 +1,231 @@
+@import '../../assets/styles/variables';
+
+.categoriesWrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+
+  .categories {
+    width: 40%;
+    -webkit-user-select: none;
+    margin-right: 10px;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+
+      li {
+        margin-left: 3%;
+        padding: 10px 15px;
+        line-height: 15px;
+        cursor: pointer;
+        border-radius: 40px;
+        color: black;
+        background-color: #f9f9f9;
+        transition-duration: 0.4s;
+
+        &:first-child {
+          margin: 0;
+        }
+
+        &:hover,
+        &:active,
+        &.active {
+          background-color: #282828;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .sortWrapper {
+    padding-right: 30px;
+
+    .sort {
+      -webkit-user-select: none;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+
+      .sortIcon {
+        padding-right: 5px;
+
+        .arrow {
+          transition: 0.15s;
+          transform: rotate(360deg);
+
+          &.active {
+            transition: 0.15s;
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      span {
+        border-bottom: 1px dotted $orange-color;
+        font-weight: 400;
+        cursor: pointer;
+        color: $orange-color;
+      }
+
+      .sortBy {
+        cursor: pointer;
+        font-weight: 600;
+        margin-right: 5px;
+      }
+
+      .sortIcon {
+        cursor: pointer;
+        padding-top: 2px;
+      }
+    }
+
+    .sortMenu {
+      -webkit-user-select: none;
+      margin-top: 10px;
+      position: absolute;
+      animation: scaleIn 0.35s ease-in-out;
+
+      ul {
+        box-shadow: $box-shadow;
+        color: black;
+        border-radius: 10px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        line-height: 25px;
+        list-style-type: none;
+        background-color: white;
+        padding: 3px 0;
+
+        li {
+          cursor: pointer;
+          padding: 7px 25px;
+
+          &:first-child {
+            margin-top: 13px;
+          }
+
+          &:last-child {
+            margin-bottom: 13px;
+          }
+
+          &:hover,
+          &:active,
+          &.active {
+            background-color: #fff7f4;
+            color: $orange-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 1920px) {
+
+  .categoriesWrapper {
+
+    .categories {
+
+      ul {
+
+        li {
+          padding: 13px 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .categoriesWrapper {
+    padding: 1px 0;
+    justify-content: space-between;
+
+    .categories {
+      overflow-x: scroll;
+      width: 65%;
+    }
+
+    .sortWrapper {
+      width: 30%;
+
+      .sort {
+        float: right;
+
+        .sortBy {
+          padding-right: 3px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .sortWrapper {
+    padding: 0 10px;
+
+    .sort {
+      width: 200px;
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .categoriesWrapper {
+    display: inline-block;
+
+    .sortWrapper {
+      padding: 0;
+    }
+
+    .categories {
+      width: 90%;
+
+      ul {
+        margin: 20px auto;
+
+        li {
+          padding: 10px 18px;
+        }
+      }
+    }
+
+    .sortWrapper {
+      margin-top: 20px;
+      justify-content: center;
+      margin-left: 40px;
+
+      .sort {
+        padding: 0;
+        position: absolute;
+        width: 207px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .sortWrapper {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,53 @@
+.pizzaFragment {
+  padding-top: 30px;
+
+  h2 {
+    -webkit-user-select: none;
+    padding-left: 29px;
+  }
+  justify-content: space-between;
+}
+
+
+.contentWrapper {
+  padding: 0 20px 60px 20px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  justify-content: flex-start;
+}
+
+
+@media (max-width: 1920px) {
+  .contentWrapper {
+    grid-row-gap: 40px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .contentWrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1060px) {
+  .contentWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 748px) {
+  .contentWrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 375px) {
+  .contentWrapper {
+    grid-row-gap: 70px;
+  }
+}
+
+
