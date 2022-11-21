@@ -1,13 +1,13 @@
 import React, {useEffect} from 'react';
 import {useSelector} from "react-redux";
 
-import s from './pizzaItems.module.scss';
-import PizzaCard from "./PizzaCard/PizzaCard";
-import Skeleton from "./PizzaCard/Skeleton";
+import PizzaCard from "../PizzaCard/PizzaCard";
+import Skeleton from "../PizzaCard/Skeleton";
+import NotFoundBlock from "../NotFoundBlock/NotFoundBlock";
+import {useAppDispatch} from '../../redux/store';
 import {filterSelector} from "../../redux/slices/filterSlice";
 import {fetchPizzas, pizzaSelector} from "../../redux/slices/pizzaSlice";
-import {useAppDispatch} from '../../redux/store';
-import NotFoundBlock from "../NotFoundBlock/NotFoundBlock";
+import s from './pizzaItems.module.scss';
 
 
 const PizzaItems: React.FC = () => {
@@ -17,29 +17,28 @@ const PizzaItems: React.FC = () => {
     const {searchValue, currentPage, categoryId, sort} = useSelector(filterSelector);
     const {items, status} = useSelector(pizzaSelector);
 
-
-    const getPizzas = async () => {
-
-        const sortBy = sort.sortProperty.replace('-', '');
-        const order = sort.sortProperty.includes('-') ? 'asc' : 'desc';
-        const category = categoryId === 0 ? `` : `&category=${categoryId}`;
-        const search = searchValue ? `&search=${searchValue}` : '';
-
-        dispatch(
-            fetchPizzas({
-                search,
-                currentPage: String(currentPage),
-                sortBy,
-                order,
-                category
-            })
-        );
-
-        window.scrollTo(0, 0);
-    };
-
-
     useEffect(() => {
+
+        const getPizzas = () => {
+
+            const sortBy = sort.sortProperty.replace('-', '');
+            const order = sort.sortProperty.includes('-') ? 'asc' : 'desc';
+            const category = categoryId === 0 ? `` : `&category=${categoryId}`;
+            const search = searchValue ? `&search=${searchValue}` : '';
+
+            dispatch(
+                fetchPizzas({
+                    search,
+                    currentPage: String(currentPage),
+                    sortBy,
+                    order,
+                    category
+                })
+            );
+
+            window.scrollTo(0, 0);
+        };
+
         getPizzas();
     }, [categoryId, sort.sortProperty, searchValue, currentPage]);
 

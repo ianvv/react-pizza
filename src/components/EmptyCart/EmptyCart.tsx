@@ -9,7 +9,7 @@ const EmptyCart: React.FC = () => {
         <div className={s.emptyCart}>
             <h1>The cart is empty...</h1>
             <p>You must have not ordered pizza yet. To order pizza - go to the main page</p>
-            <img src={emptyCart} alt=""/>
+            <img src={emptyCart} alt="Empty card image"/>
         </div>
     )
 }

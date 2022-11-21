@@ -2,7 +2,7 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {RootState} from "../store";
 
 
-export enum SortPropertyEnum {
+export enum ESortPropertyEnum {
     RATING_DESC = 'rating',
     RATING_ASC = '-rating',
     NAME_DESC = 'name',
@@ -11,24 +11,24 @@ export enum SortPropertyEnum {
     PRICE_ASC = '-price',
 }
 
-export type Sort = {
-    name: string,
-    sortProperty: SortPropertyEnum,
-};
-
-export interface FilterSliceState {
-    categoryId: number,
-    sort: Sort,
-    currentPage: number,
-    searchValue: string,
-    itemsCount?: number,
+export type TSort = {
+    name: string;
+    sortProperty: ESortPropertyEnum;
 }
 
-const initialState: FilterSliceState = {
+export interface IFilterSliceState {
+    categoryId: number;
+    sort: TSort;
+    currentPage: number;
+    searchValue: string;
+    itemsCount?: number;
+}
+
+const initialState: IFilterSliceState = {
     categoryId: 0,
     sort: {
         name: 'popularity (desc)',
-        sortProperty: SortPropertyEnum.RATING_DESC
+        sortProperty: ESortPropertyEnum.RATING_DESC
     },
     currentPage: 1,
     searchValue: '',
@@ -42,7 +42,7 @@ const filterSlice = createSlice({
         setCategoryId(state, action: PayloadAction<number>) {
             state.categoryId = action.payload;
         },
-        setSort(state, action: PayloadAction<Sort>) {
+        setSort(state, action: PayloadAction<TSort>) {
             state.sort = action.payload;
         },
         setCurrentPage(state, action: PayloadAction<number>) {
@@ -51,7 +51,7 @@ const filterSlice = createSlice({
         setSearchValue(state, action: PayloadAction<string>) {
             state.searchValue = action.payload;
         },
-        setFilters(state, action: PayloadAction<FilterSliceState>) {
+        setFilters(state, action: PayloadAction<IFilterSliceState>) {
             if (Object.keys(action.payload).length) {
                 state.sort = action.payload.sort;
                 state.categoryId = Number(action.payload.categoryId);
@@ -59,7 +59,7 @@ const filterSlice = createSlice({
             } else {
                 state.sort = {
                     name: 'popularity (desc)',
-                    sortProperty: SortPropertyEnum.RATING_DESC
+                    sortProperty: ESortPropertyEnum.RATING_DESC
                 }
                 state.categoryId = 0;
                 state.currentPage = 1;

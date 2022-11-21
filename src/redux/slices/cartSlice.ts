@@ -2,23 +2,23 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {RootState} from "../store";
 import {getItemsFromLS, getTotalCount, getTotalPrice} from "../../utils/getItemsFromLS";
 
-export type CartItem = {
-    id: number ,
-    name: string,
-    price: number,
-    imageUrl: string,
-    type: string,
-    size: number,
-    count: number,
-};
-
-interface CartSliceState {
-    totalPrice: number,
-    items: CartItem[],
-    totalCount: number,
+export type TCartItem = {
+    id: number;
+    name: string;
+    price: number;
+    imageUrl: string;
+    type: string;
+    size: number;
+    count: number;
 }
 
-const initialState: CartSliceState = {
+interface ICartSliceState {
+    totalPrice: number;
+    items: TCartItem[];
+    totalCount: number;
+}
+
+const initialState: ICartSliceState = {
     totalPrice: getTotalPrice(),
     items: getItemsFromLS(),
     totalCount: getTotalCount(),
@@ -28,7 +28,7 @@ const cartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
-        addItem(state, action: PayloadAction<CartItem>) {
+        addItem(state, action: PayloadAction<TCartItem>) {
             const findItem = state.items.find(obj => obj.id === action.payload.id);
             if (findItem) {
                 findItem.count++;

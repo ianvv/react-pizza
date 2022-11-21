@@ -1,12 +1,12 @@
 import React, {useEffect, useRef} from 'react';
+import {useSelector} from "react-redux";
 import {useLocation, useNavigate} from "react-router-dom";
 import {BsCart3} from "react-icons/bs";
-import {useSelector} from "react-redux";
 
-import s from './header.module.scss';
-import logo from '../../assets/img/logo.svg';
 import Search from "../Search/Search";
 import {cartSelector} from "../../redux/slices/cartSlice";
+import logo from '../../assets/img/logo.svg';
+import s from './header.module.scss';
 
 
 const Header: React.FC = () => {

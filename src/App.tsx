@@ -5,9 +5,9 @@ import "./assets/styles/app.scss";
 import HomePage from "./pages/HomePage";
 import MainLayout from "./layouts/MainLayout";
 
+
 const CartPage = lazy(() => import(/* webpackChunkName: "CartPage" */ "./pages/CartPage"));
 const ErrorPage = lazy(() => import(/* webpackChunkName: "ErrorPage" */ "./pages/ErrorPage"));
-
 
 function App() {
 

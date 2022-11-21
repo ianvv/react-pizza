@@ -1,14 +1,14 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
 import {IoTrashOutline} from "react-icons/io5";
 import {BsCart3} from "react-icons/bs";
 import {IoIosArrowBack} from "react-icons/io";
-import {Link} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
 
-import s from "./cart.module.scss";
 import {CartItemCard} from "./CartItemCard";
-import {cartSelector, clearItems} from "../../redux/slices/cartSlice";
 import EmptyCart from "../EmptyCart/EmptyCart";
+import {cartSelector, clearItems} from "../../redux/slices/cartSlice";
+import s from "./cart.module.scss";
 
 
 const Cart: React.FC = () => {

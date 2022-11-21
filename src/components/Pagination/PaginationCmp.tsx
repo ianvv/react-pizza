@@ -10,7 +10,6 @@ import s from './pagination.module.scss';
 const PaginationCmp: React.FC = () => {
 
     const dispatch = useDispatch();
-
     const {currentPage} = useSelector(filterSelector);
 
     const useStyles = makeStyles(() => ({

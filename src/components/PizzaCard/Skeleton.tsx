@@ -4,14 +4,12 @@ import ContentLoader from "react-content-loader";
 import s from './pizzaCard.module.scss';
 
 
-const Skeleton: React.FC = ()=> {
+const Skeleton: React.FC = () => {
 
     return (
         <ContentLoader
             className={s.pizzaCard}
             speed={2}
-            // width={300}
-            // height={450}
             viewBox="0 0 300 450"
             backgroundColor="#f3f3f3"
             foregroundColor="#ecebeb"
@@ -24,4 +22,5 @@ const Skeleton: React.FC = ()=> {
         </ContentLoader>
     );
 }
+
 export default Skeleton

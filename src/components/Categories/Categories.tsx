@@ -1,13 +1,13 @@
 import React, {memo, useCallback} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 
-import s from './categories.module.scss';
 import {SortPopup} from "./SortPopup";
 import {filterSelector, setCategoryId} from "../../redux/slices/filterSlice";
+import s from './categories.module.scss';
 
-type categoriesItem = { name: string };
+type TCategoriesItem = { name: string }
 
-const categories: categoriesItem[] = [
+const categories: TCategoriesItem[] = [
     {name: 'All'},
     {name: 'Meat'},
     {name: 'Vegetarian'},
@@ -34,7 +34,9 @@ const Categories: React.FC = memo(() => {
                             key={index}
                             className={categoryId === index ? s.active : ''}
                             onClick={() => categoriesHandler(index)}
-                        >{category.name}</li>)
+                        >
+                            {category.name}
+                        </li>)
                     }
                 </ul>
             </div>

@@ -2,6 +2,7 @@ import React from 'react';
 
 import s from './notFoundBlock.module.scss'
 
+
 const NotFoundBlock: React.FC = () => {
 
     return (

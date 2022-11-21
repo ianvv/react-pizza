@@ -3,16 +3,25 @@ import {useDispatch, useSelector} from "react-redux";
 import {AiOutlineMinusCircle, AiOutlinePlusCircle} from "react-icons/ai";
 import {TiDeleteOutline} from "react-icons/ti";
 
-import s from './cart.module.scss';
 import {increment, decrement, removeItem, cartItemByIdSelector} from "../../redux/slices/cartSlice";
+import s from './cart.module.scss';
 
 
-type CartItemProps = {id: number, name: string, price: number, imageUrl: string, type: string, size: string};
+interface ICartItemProps {
+    id: number;
+    name: string;
+    price: number;
+    imageUrl: string;
+    type: string;
+    size: string;
+}
 
-export const CartItemCard: React.FC<CartItemProps> = ({id, name, price, imageUrl, type, size}) => {
+export const CartItemCard: React.FC<ICartItemProps> = (cartItemObject) => {
 
-    const count = useSelector(cartItemByIdSelector(id))?.count;
+    const {id, name, price, imageUrl, type, size} = cartItemObject;
+
     const dispatch = useDispatch();
+    const count = useSelector(cartItemByIdSelector(id))?.count;
 
     return (
         <div className={s.cartWrapper}>
@@ -54,5 +63,3 @@ export const CartItemCard: React.FC<CartItemProps> = ({id, name, price, imageUrl
         </div>
     );
 }
-
-// export default CartItemCard;

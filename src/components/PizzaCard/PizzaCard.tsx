@@ -3,39 +3,38 @@ import {BsPlus} from "react-icons/bs";
 import {useDispatch, useSelector} from "react-redux";
 
 import s from './pizzaCard.module.scss';
-import {addItem, CartItem, cartItemByIdSelector} from "../../../redux/slices/cartSlice";
+import {addItem, TCartItem, cartItemByIdSelector} from "../../redux/slices/cartSlice";
 
 
+type TTypeNamesItem = string[];
+type TSizeNamesItem = number[];
 
-type typeNamesItem = string[];
-type sizeNamesItem = number[];
+const typeNames: TTypeNamesItem = ['thin', 'traditional'];
+const sizeNames: TSizeNamesItem = [26, 30, 40];
 
-const typeNames: typeNamesItem = ['thin', 'traditional'];
-const sizeNames: sizeNamesItem = [26, 30, 40];
+interface IPizzaCardProps {
+    id: number;
+    name: string;
+    imageUrl: string;
+    price: number;
+    sizes: number[];
+    types: number[];
+    rating: number;
+}
 
-type PizzaCardProps = {
-    id: number,
-    name: string,
-    imageUrl: string,
-    price: number,
-    sizes: number[],
-    types: number[],
-    rating: number
-};
+const PizzaCard: React.FC<IPizzaCardProps> = (pizzaCardProps) => {
 
-const PizzaCard: React.FC<PizzaCardProps> = ({id, name, imageUrl,
-                                                 price, sizes, types}) => {
+    const { id, name, imageUrl, price, sizes, types } = pizzaCardProps;
 
     const [activeType, setActiveType] = useState(0);
     const [activeSize, setActiveSize] = useState(0);
-
-    const dispatch = useDispatch();
     const cartItem = useSelector(cartItemByIdSelector(id));
+    const dispatch = useDispatch();
 
     const addedCount = cartItem ? cartItem.count : 0;
 
     const onClickAdd = () => {
-        const item: CartItem = {
+        const item: TCartItem = {
             id,
             name,
             price,

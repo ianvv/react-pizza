@@ -1,22 +1,23 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {VscTriangleUp} from "react-icons/vsc";
-import {motion} from 'framer-motion';
 
+import {filterSelector, setSort, ESortPropertyEnum} from "../../redux/slices/filterSlice";
 import arrows from '../../assets/img/arrows.svg';
 import s from "./categories.module.scss";
-import {filterSelector, setSort, SortPropertyEnum} from "../../redux/slices/filterSlice";
 
 
-type SortItem = { name: string; sortProperty: SortPropertyEnum };
+type TSortItem = {
+    name: string;
+    sortProperty: ESortPropertyEnum;
+}
 
-export const sortItems: SortItem[] = [
-    {name: 'popularity (desc)', sortProperty: SortPropertyEnum.RATING_DESC},
-    {name: 'popularity (asc)', sortProperty: SortPropertyEnum.RATING_ASC},
-    {name: 'price (desc)', sortProperty: SortPropertyEnum.PRICE_DESC},
-    {name: 'price (asc)', sortProperty: SortPropertyEnum.PRICE_ASC},
-    {name: 'alphabet (desc)', sortProperty: SortPropertyEnum.NAME_DESC},
-    {name: 'alphabet (asc)', sortProperty: SortPropertyEnum.NAME_ASC}
+export const sortItems: TSortItem[] = [
+    {name: 'popularity (desc)', sortProperty: ESortPropertyEnum.RATING_DESC},
+    {name: 'popularity (asc)', sortProperty: ESortPropertyEnum.RATING_ASC},
+    {name: 'price (desc)', sortProperty: ESortPropertyEnum.PRICE_DESC},
+    {name: 'price (asc)', sortProperty: ESortPropertyEnum.PRICE_ASC},
+    {name: 'alphabet (desc)', sortProperty: ESortPropertyEnum.NAME_DESC},
+    {name: 'alphabet (asc)', sortProperty: ESortPropertyEnum.NAME_ASC}
 ];
 
 type SortClick = MouseEvent & { path: Node[] };
@@ -24,9 +25,7 @@ type SortClick = MouseEvent & { path: Node[] };
 export const SortPopup: React.FC = () => {
 
     const [menu, setMenu] = useState(false);
-    // const [turnedTriangle, setTurnedTriangle] = useState(false);
     const sortRef = useRef<HTMLDivElement>(null);
-
     const {sort} = useSelector(filterSelector);
     const dispatch = useDispatch();
 
@@ -43,6 +42,10 @@ export const SortPopup: React.FC = () => {
         return () => {
             document.body.removeEventListener('click', handleClickOutside);
         };
+    }, []);
+
+    const sortPopupHandler = useCallback((obj: TSortItem) => {
+        dispatch(setSort(obj));
     }, []);
 
     return (
@@ -68,7 +71,7 @@ export const SortPopup: React.FC = () => {
                         {
                             sortItems.map((obj, index) => <li
                                 key={index}
-                                onClick={() => dispatch(setSort(obj))}
+                                onClick={() => sortPopupHandler(obj)}
                                 className={sort.name === obj.name ? s.active : ''}
                             >{obj.name}</li>)
                         }
@@ -78,5 +81,3 @@ export const SortPopup: React.FC = () => {
         </div>
     );
 }
-
-// export default SortPopup;
