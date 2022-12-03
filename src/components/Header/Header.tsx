@@ -30,31 +30,34 @@ const Header: React.FC = () => {
     }, [items]);
 
     return (
-        <div className={s.header}>
-            <div className={s.leftSide} onClick={() => navigate('/')}>
-                <div className={s.logo}>
-                    <img src={logo} alt="logo"/>
-                </div>
-                <div className={s.logoCaption}>
-                    <h1>REACT PIZZA</h1>
-                    <h3>Tastes better than ever</h3>
-                </div>
-            </div>
-
-            {location.pathname !== '/cart' &&
-                (<>
-                    {location.pathname === '/' && <Search/>}
-                    <div className={s.buttonWrapper}>
-                        <button className={s.rightSide} onClick={() => navigate('/cart')}>
-                            <div className={s.totalPrice}>{totalPrice} $</div>
-                            <div className={s.basket}>
-                                <div className={s.basketIcon}>{<BsCart3 size={16}/>}</div>
-                                <div className={s.totalCount}>{totalCount}</div>
-                            </div>
-                        </button>
+        <div className={s.headerWrapper}>
+            <div className={s.header}>
+                <div className={s.leftSide} onClick={() => navigate('/')}>
+                    <div className={s.logo}>
+                        <img src={logo} alt="logo"/>
                     </div>
-                </>)
-            }
+                    <div className={s.logoCaption}>
+                        <h1>REACT PIZZA</h1>
+                        <h3>Tastes better than ever</h3>
+                    </div>
+                </div>
+
+                {location.pathname !== '/cart' &&
+                    (<>
+                        {location.pathname === '/' && <Search/>}
+                        <div className={s.buttonWrapper}>
+                            <button className={s.rightSide} onClick={() => navigate('/cart')}>
+                                <div className={s.totalPrice}>{totalPrice} $</div>
+                                <div className={s.pipe}>|</div>
+                                <div className={s.basket}>
+                                    <div className={s.basketIcon}>{<BsCart3 size={16}/>}</div>
+                                    <div className={s.totalCount}>{totalCount}</div>
+                                </div>
+                            </button>
+                        </div>
+                    </>)
+                }
+            </div>
         </div>
     );
 }

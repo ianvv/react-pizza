@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {useSelector} from "react-redux";
 
 import PizzaCard from "../PizzaCard/PizzaCard";
-import Skeleton from "../PizzaCard/Skeleton";
+import Skeleton from "../Skeleton/Skeleton";
 import NotFoundBlock from "../NotFoundBlock/NotFoundBlock";
 import {useAppDispatch} from '../../redux/store';
 import {filterSelector} from "../../redux/slices/filterSlice";
@@ -45,22 +45,27 @@ const PizzaItems: React.FC = () => {
     const skeletons = [...new Array(6)].map((_, index) => <Skeleton key={index}/>);
     const pizzas = items.map((obj: any) => <PizzaCard key={obj.id} {...obj} />);
 
+
     return (
         <div className={s.pizzaFragment}>
             {
                 status === 'loading'
                     ? <>
                         <h2>All pizzas</h2>
-                        <div className={s.contentWrapper}>{skeletons}</div>
+                        <div className={s.contentWrapper}>
+                            <div className={s.content}>{skeletons}</div>
+                        </div>
                     </>
                     : items.length === 0 ? <NotFoundBlock/>
                         : <>
                             <h2>All pizzas</h2>
-                            <div className={s.contentWrapper}>{pizzas}</div>
+                            <div className={s.contentWrapper}>
+                                <div className={s.content}>{pizzas}</div>
+                            </div>
                         </>
             }
         </div>
     );
-};
+}
 
 export default PizzaItems;

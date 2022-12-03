@@ -1,9 +1,10 @@
 import React, {memo, useCallback} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 
-import {SortPopup} from "./SortPopup";
+import {SortPopup} from "../SortPopup/SortPopup";
 import {filterSelector, setCategoryId} from "../../redux/slices/filterSlice";
 import s from './categories.module.scss';
+
 
 type TCategoriesItem = { name: string }
 
@@ -15,6 +16,7 @@ const categories: TCategoriesItem[] = [
     {name: 'Spicy'},
     {name: 'Closed'},
 ];
+
 
 const Categories: React.FC = memo(() => {
 

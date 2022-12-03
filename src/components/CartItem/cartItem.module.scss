@@ -1,0 +1,118 @@
+@import '../../assets/styles/variables';
+
+
+.itemWrapper {
+
+  .item {
+    flex-direction: row;
+    display: flex;
+
+    padding: 30px 0;
+    justify-content: space-between;
+    border-top: 0.5px solid #b6b6b6;
+    align-items: center;
+
+    .pizzaImg {
+      img {
+        -webkit-user-select: none;
+        width: 70px
+      }
+    }
+
+
+    .itemDescription {
+      width: 10%;
+      display: flex;
+      gap: 5px;
+
+      .params {
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        .itemName {
+          -webkit-user-select: none;
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        .itemSize {
+          -webkit-user-select: none;
+          font-size: 14px;
+          font-weight: 400;
+          color: #838383;
+          display: flex;
+
+          .cm {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+
+    .setCount {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      column-gap: 6px;
+
+      .plus {
+        background-color: white;
+        border: none;
+        color: black;
+
+        &:hover {
+          cursor: pointer;
+          color: $orange-color;
+        }
+      }
+
+      .minus {
+        background-color: white;
+        border: none;
+        color: black;
+
+        &:hover {
+          color: #fe5f1e;
+          cursor: pointer;
+        }
+
+        &:disabled {
+          opacity: 0.4;
+
+          &:hover {
+            color: black;
+            cursor: default;
+          }
+        }
+      }
+
+      .count {
+        -webkit-user-select: none;
+        color: black;
+        font-weight: bold;
+        font-size: 19px;
+      }
+    }
+
+    .price {
+      -webkit-user-select: none;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .remove {
+      cursor: pointer;
+      border: none;
+      background-color: white;
+      color: #838383;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}

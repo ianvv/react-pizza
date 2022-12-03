@@ -1,29 +1,6 @@
 .notFoundContent {
-  margin: 50px auto 220px auto;
-  font-size: 30px;
+  padding-top: 30px;
+  font-size: calc(18px + 12 * (100vw / 1280));
   font-weight: bold;
   text-align: center;
-}
-
-@media (max-width: 1920px) {
-  .notFoundContent {
-  }
-}
-
-@media (max-width: 600px) {
-  .notFoundContent {
-    margin-top: 65px;
-  }
-}
-
-@media (max-width: 480px) {
-  .notFoundContent {
-    font-size: 23px;
-  }
-}
-
-@media (max-width: 375px) {
-  .notFoundContent {
-    font-size: 20px;
-  }
 }

@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 
 import {filterSelector, setSort, ESortPropertyEnum} from "../../redux/slices/filterSlice";
 import arrows from '../../assets/img/arrows.svg';
-import s from "./categories.module.scss";
+import s from './sortPopup.module.scss';
 
 
 type TSortItem = {

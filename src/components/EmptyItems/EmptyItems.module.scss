@@ -1,0 +1,15 @@
+.emptyItemsWrapper {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+}
+
+.emptyItems {
+  text-align: center;
+
+  img {
+    padding-top: 5.5vh;
+    width: 60%;
+  }
+}

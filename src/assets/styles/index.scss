@@ -6,4 +6,18 @@ body {
   padding: 25px;
   background-color: #fbdb8a;
   font-family: 'Nunito', sans-serif;
+
+  h1, h3, ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }

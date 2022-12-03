@@ -16,7 +16,7 @@ function App() {
             <Route path='/' element={<MainLayout/>}>
                 <Route path='' element={<HomePage/>}/>
                 <Route path='cart' element={
-                    <Suspense fallback={<div>Cart loading...</div>}>
+                    <Suspense fallback={<div className='cartLoading'><span>Cart loading...</span></div>}>
                         <CartPage/>
                     </Suspense>
                 }/>

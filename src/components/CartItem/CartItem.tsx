@@ -4,7 +4,7 @@ import {AiOutlineMinusCircle, AiOutlinePlusCircle} from "react-icons/ai";
 import {TiDeleteOutline} from "react-icons/ti";
 
 import {increment, decrement, removeItem, cartItemByIdSelector} from "../../redux/slices/cartSlice";
-import s from './cart.module.scss';
+import s from './cartItem.module.scss';
 
 
 interface ICartItemProps {
@@ -16,7 +16,7 @@ interface ICartItemProps {
     size: string;
 }
 
-export const CartItemCard: React.FC<ICartItemProps> = (cartItemObject) => {
+export const CartItem: React.FC<ICartItemProps> = (cartItemObject) => {
 
     const {id, name, price, imageUrl, type, size} = cartItemObject;
 
@@ -24,16 +24,18 @@ export const CartItemCard: React.FC<ICartItemProps> = (cartItemObject) => {
     const count = useSelector(cartItemByIdSelector(id))?.count;
 
     return (
-        <div className={s.cartWrapper}>
+        <div className={s.itemWrapper}>
             <div className={s.item}>
-                <div className={s.pizzaImg}>
-                    <img src={imageUrl} alt=""/>
-                </div>
                 <div className={s.itemDescription}>
-                    <div className={s.itemName}>{name}</div>
-                    <div className={s.itemSize}>
-                        <div className={s.itemWidth}>{type},</div>
-                        <div className={s.cm}>{size} cm</div>
+                    <div className={s.pizzaImg}>
+                        <img src={imageUrl} alt=""/>
+                    </div>
+                    <div className={s.params}>
+                        <div className={s.itemName}>{name}</div>
+                        <div className={s.itemSize}>
+                            <div className={s.itemWidth}>{type},</div>
+                            <div className={s.cm}>{size} cm</div>
+                        </div>
                     </div>
                 </div>
                 <div className={s.setCount}>

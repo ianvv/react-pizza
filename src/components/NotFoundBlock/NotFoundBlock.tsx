@@ -1,6 +1,5 @@
 import React from 'react';
-
-import s from './notFoundBlock.module.scss'
+import s from './notFoundBlock.module.scss';
 
 
 const NotFoundBlock: React.FC = () => {
@@ -9,7 +8,7 @@ const NotFoundBlock: React.FC = () => {
         <div className={s.notFoundContent}>
             Oops...Here is no pizzas
         </div>
-    )
-};
+    );
+}
 
 export default NotFoundBlock;

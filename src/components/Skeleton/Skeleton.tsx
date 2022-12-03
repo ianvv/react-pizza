@@ -1,7 +1,7 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
 
-import s from './pizzaCard.module.scss';
+import s from '../PizzaCard/pizzaCard.module.scss';
 
 
 const Skeleton: React.FC = () => {

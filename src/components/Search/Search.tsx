@@ -31,17 +31,19 @@ const Search: React.FC = () => {
     };
 
     return (
-        <div className={s.searchWrapper}>
-            <div className={s.searchIcon}>
-                <AiOutlineSearch size={21}/>
-            </div>
-            <input
-                ref={inputRef}
-                placeholder='Search pizza...'
-                className={s.searchInput}
-                value={value}
-                onChange={(event) => onChangeInput(event)}
-            />
+        <div className={s.search}>
+            <form action="">
+                <div className={s.searchIcon}>
+                    <AiOutlineSearch size={21}/>
+                </div>
+                <input type="text"
+                       ref={inputRef}
+                       placeholder='Search pizza...'
+                       className={s.searchInput}
+                       value={value}
+                       onChange={(event) => onChangeInput(event)}
+                />
+            </form>
             {value &&
                 <div className={s.closeIcon}>
                     <IoCloseOutline

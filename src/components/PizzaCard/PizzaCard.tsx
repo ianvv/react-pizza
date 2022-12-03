@@ -28,6 +28,7 @@ const PizzaCard: React.FC<IPizzaCardProps> = (pizzaCardProps) => {
 
     const [activeType, setActiveType] = useState(0);
     const [activeSize, setActiveSize] = useState(0);
+
     const cartItem = useSelector(cartItemByIdSelector(id));
     const dispatch = useDispatch();
 
@@ -78,7 +79,7 @@ const PizzaCard: React.FC<IPizzaCardProps> = (pizzaCardProps) => {
                 <div className={s.price}>{price}$</div>
                 <button className={s.add} onClick={onClickAdd}>
                     <div className={s.addIcon}>{<BsPlus size={26}/>}</div>
-                    Add {cartItem && <span>{addedCount}</span>}
+                    Add {cartItem && <div className={s.count}><span>{addedCount}</span></div>}
                 </button>
             </div>
         </div>
