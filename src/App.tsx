@@ -1,33 +1,32 @@
-import {Routes, Route} from "react-router-dom";
-import {lazy, Suspense} from "react";
+import {RouteObject, useRoutes} from "react-router-dom";
 
-import "./assets/styles/app.scss";
 import HomePage from "./pages/HomePage";
 import MainLayout from "./layouts/MainLayout";
+import CartPage from "./pages/CartPage";
+import ErrorPage from "./pages/ErrorPage";
+import "./assets/styles/app.scss";
 
 
-const CartPage = lazy(() => import(/* webpackChunkName: "CartPage" */ "./pages/CartPage"));
-const ErrorPage = lazy(() => import(/* webpackChunkName: "ErrorPage" */ "./pages/ErrorPage"));
+type TRouteItem = RouteObject;
+
+const routes: TRouteItem[] = [
+    {
+        path: '',
+        element: <HomePage/>
+    },
+    {
+        path: '/cart',
+        element: <CartPage/>
+    },
+    {
+        path: '/*',
+        element: <ErrorPage/>
+    }
+]
+
 
 function App() {
-
-    return (
-        <Routes>
-            <Route path='/' element={<MainLayout/>}>
-                <Route path='' element={<HomePage/>}/>
-                <Route path='cart' element={
-                    <Suspense fallback={<div className='cartLoading'><span>Cart loading...</span></div>}>
-                        <CartPage/>
-                    </Suspense>
-                }/>
-                <Route path='*' element={
-                    <Suspense fallback={<div className='cartLoading'>Error loading...</div>}>
-                        <ErrorPage/>
-                    </Suspense>
-                }/>
-            </Route>
-        </Routes>
-    );
+    return useRoutes([{path: "/", element: <MainLayout/>, children: routes}]);
 }
 
 export default App;

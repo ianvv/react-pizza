@@ -3,15 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0c621645-4a48-4f65-9091-9be318ce352f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/@types/assets.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/@types/assets.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CartItem/cartItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartItem/cartItem.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Categories/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories/Categories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotFoundBlock/notFoundBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotFoundBlock/notFoundBlock.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/pagination.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/pagination.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Skeleton/Skeleton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Skeleton/Skeleton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SortPopup/SortPopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SortPopup/SortPopup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +72,7 @@
       <workItem from="1668035723565" duration="5212000" />
       <workItem from="1669064022740" duration="4017000" />
       <workItem from="1669876323574" duration="34031000" />
-      <workItem from="1670107067642" duration="8234000" />
+      <workItem from="1670107067642" duration="12556000" />
     </task>
     <servers />
   </component>
