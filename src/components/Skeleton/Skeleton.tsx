@@ -1,10 +1,10 @@
-import React from "react";
+import React, { memo } from "react";
 import ContentLoader from "react-content-loader";
 
 import s from '../PizzaCard/pizzaCard.module.scss';
 
 
-const Skeleton: React.FC = () => {
+const Skeleton: React.FC = memo (() => {
 
     return (
         <ContentLoader
@@ -21,6 +21,6 @@ const Skeleton: React.FC = () => {
             <rect x="226" y="392" rx="20" ry="25" width="74" height="42"/>
         </ContentLoader>
     );
-}
+})
 
 export default Skeleton

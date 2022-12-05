@@ -21,7 +21,7 @@ function App() {
                     </Suspense>
                 }/>
                 <Route path='*' element={
-                    <Suspense fallback={<div>Error loading...</div>}>
+                    <Suspense fallback={<div className='cartLoading'>Error loading...</div>}>
                         <ErrorPage/>
                     </Suspense>
                 }/>

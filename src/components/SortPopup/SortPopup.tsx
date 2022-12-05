@@ -1,12 +1,11 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import React, {memo, useEffect, useRef, useState} from 'react';
 
-import {filterSelector, setSort, ESortPropertyEnum} from "../../redux/slices/filterSlice";
+import {ESortPropertyEnum, TSort} from "../../redux/slices/filterSlice";
 import arrows from '../../assets/img/arrows.svg';
 import s from './sortPopup.module.scss';
 
 
-type TSortItem = {
+export type TSortItem = {
     name: string;
     sortProperty: ESortPropertyEnum;
 }
@@ -20,14 +19,20 @@ export const sortItems: TSortItem[] = [
     {name: 'alphabet (asc)', sortProperty: ESortPropertyEnum.NAME_ASC}
 ];
 
-type SortClick = MouseEvent & { path: Node[] };
+type SortClick = MouseEvent & {
+    path: Node[];
+}
 
-export const SortPopup: React.FC = () => {
+interface ISortPopupProps {
+    sortPopupHandler: (obj: TSortItem) => void;
+    sort: TSort;
+}
+
+
+export const SortPopup: React.FC<ISortPopupProps> = memo (({sortPopupHandler, sort}) => {
 
     const [menu, setMenu] = useState(false);
     const sortRef = useRef<HTMLDivElement>(null);
-    const {sort} = useSelector(filterSelector);
-    const dispatch = useDispatch();
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -44,22 +49,16 @@ export const SortPopup: React.FC = () => {
         };
     }, []);
 
-    const sortPopupHandler = useCallback((obj: TSortItem) => {
-        dispatch(setSort(obj));
-    }, []);
-
     return (
         <div ref={sortRef} className={s.sortWrapper} onClick={() => setMenu(!menu)}>
             <div className={s.sort}>
-
-                    <div className={s.sortIcon}>
-                        <img
-                            src={arrows}
-                            alt="arrows"
-                            className={menu ? s.arrow : `${s.arrow} ${s.active}`}
-                        />
-                    </div>
-
+                <div className={s.sortIcon}>
+                    <img
+                        src={arrows}
+                        alt="arrows"
+                        className={menu ? s.arrow : `${s.arrow} ${s.active}`}
+                    />
+                </div>
                 <div className={s.sortBy}>
                     Sort by:
                 </div>
@@ -80,4 +79,4 @@ export const SortPopup: React.FC = () => {
             }
         </div>
     );
-}
+})

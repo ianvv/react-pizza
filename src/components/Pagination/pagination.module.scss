@@ -5,17 +5,7 @@
   border-top: 1px solid grey;
   -webkit-user-select: none;
   padding: 40px 0;
-}
-
-.pagination {
-  width: 238px;
-  display: block;
-  margin: 0 auto;
-}
-
-@media (max-width: 425px) {
- .paginationWrapper {
-   padding-left: 10px;
-   padding-right: 3px;
- }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
