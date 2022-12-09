@@ -4,10 +4,10 @@ import {useDispatch, useSelector} from "react-redux";
 import Categories from "../components/Categories/Categories";
 import PizzaItems from "../components/PizzaItems/PizzaItems";
 import PaginationCmp from "../components/Pagination/PaginationCmp";
-import HomePageError from "../components/EmptyItems/EmptyItems";
 import {pizzaSelector} from "../redux/slices/pizzaSlice";
 import EmptyItems from "../components/EmptyItems/EmptyItems";
-import {filterSelector, setCategoryId} from "../redux/slices/filterSlice";
+import {filterSelector, setCategoryId, setSort} from "../redux/slices/filterSlice";
+import {TSortItem} from "../components/SortPopup/SortPopup";
 
 
 const HomePage: React.FC = () => {
@@ -18,6 +18,10 @@ const HomePage: React.FC = () => {
 
     const categoriesHandler = useCallback((index: number) => {
         dispatch(setCategoryId(index));
+    }, [])
+
+    const sortPopupHandler = useCallback((obj: TSortItem) => {
+        dispatch(setSort(obj));
     }, [])
 
     return (
@@ -31,6 +35,7 @@ const HomePage: React.FC = () => {
                     <Categories
                         categoriesHandler={categoriesHandler}
                         categoryId={categoryId}
+                        sortPopupHandler={sortPopupHandler}
                     />
                     <PizzaItems/>
                     <PaginationCmp/>

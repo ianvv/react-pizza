@@ -1,9 +1,9 @@
-import React, {memo, useCallback} from 'react';
+import React, {memo} from 'react';
 
 import {SortPopup, TSortItem} from "../SortPopup/SortPopup";
 import s from './categories.module.scss';
-import {filterSelector, setSort} from "../../redux/slices/filterSlice";
-import {useDispatch, useSelector} from "react-redux";
+import {filterSelector} from "../../redux/slices/filterSlice";
+import {useSelector} from "react-redux";
 
 
 type TCategoriesItem = {
@@ -22,16 +22,12 @@ const categories: TCategoriesItem[] = [
 interface ICategoriesProps {
     categoriesHandler: (index: number) => void;
     categoryId: number;
+    sortPopupHandler: (obj: TSortItem) => void;
 }
 
-const Categories: React.FC<ICategoriesProps> = memo(({categoriesHandler, categoryId}) => {
+const Categories: React.FC<ICategoriesProps> = memo(({categoriesHandler, categoryId, sortPopupHandler}) => {
 
-    const dispatch = useDispatch();
     const {sort} = useSelector(filterSelector);
-
-    const sortPopupHandler = useCallback((obj: TSortItem) => {
-        dispatch(setSort(obj));
-    }, []);
 
     return (
         <div className={s.categoriesWrapper}>

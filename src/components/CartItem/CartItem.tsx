@@ -27,8 +27,10 @@ export const CartItem: React.FC<ICartItemProps> = (cartItemObject) => {
         <div className={s.itemWrapper}>
             <div className={s.item}>
                 <div className={s.itemDescription}>
-                    <div className={s.pizzaImg}>
-                        <img src={imageUrl} alt=""/>
+                    <div>
+                        <div className={s.pizzaImg}>
+                            <img src={imageUrl} alt=""/>
+                        </div>
                     </div>
                     <div className={s.params}>
                         <div className={s.itemName}>{name}</div>

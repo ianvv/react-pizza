@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/@types/assets.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/@types/assets.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories/Categories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +74,9 @@
       <workItem from="1668035723565" duration="5212000" />
       <workItem from="1669064022740" duration="4017000" />
       <workItem from="1669876323574" duration="34031000" />
-      <workItem from="1670107067642" duration="12556000" />
+      <workItem from="1670107067642" duration="13351000" />
+      <workItem from="1670322105481" duration="1350000" />
+      <workItem from="1670576553152" duration="615000" />
     </task>
     <servers />
   </component>

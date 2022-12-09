@@ -22,7 +22,7 @@ const routes: TRouteItem[] = [
         path: '/*',
         element: <ErrorPage/>
     }
-]
+];
 
 
 function App() {
