@@ -1,8 +1,6 @@
-@import '../../assets/styles/variables';
-
+@import "../../assets/styles/variables";
 
 .itemWrapper {
-
   .item {
     flex-direction: row;
     display: flex;
@@ -15,10 +13,9 @@
     .pizzaImg {
       img {
         -webkit-user-select: none;
-        width: 70px
+        width: 70px;
       }
     }
-
 
     .itemDescription {
       display: flex;
@@ -31,7 +28,6 @@
         padding-left: 5px;
         flex-direction: column;
         justify-content: center;
-
 
         .itemName {
           -webkit-user-select: none;

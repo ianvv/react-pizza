@@ -1,71 +1,71 @@
-import React, {useEffect} from 'react';
-import {useSelector} from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 import PizzaCard from "../PizzaCard/PizzaCard";
 import Skeleton from "../Skeleton/Skeleton";
 import NotFoundBlock from "../NotFoundBlock/NotFoundBlock";
-import {useAppDispatch} from '../../redux/store';
-import {filterSelector} from "../../redux/slices/filterSlice";
-import {fetchPizzas, pizzaSelector} from "../../redux/slices/pizzaSlice";
-import s from './pizzaItems.module.scss';
-
+import { useAppDispatch } from "../../redux/store";
+import { filterSelector } from "../../redux/slices/filterSlice";
+import { fetchPizzas, pizzaSelector } from "../../redux/slices/pizzaSlice";
+import s from "./pizzaItems.module.scss";
 
 const PizzaItems: React.FC = () => {
+  const dispatch = useAppDispatch();
 
-    const dispatch = useAppDispatch();
+  const { searchValue, currentPage, categoryId, sort } =
+    useSelector(filterSelector);
+  const { items, status } = useSelector(pizzaSelector);
 
-    const {searchValue, currentPage, categoryId, sort} = useSelector(filterSelector);
-    const {items, status} = useSelector(pizzaSelector);
+  useEffect(() => {
+    const getPizzas = () => {
+      const sortBy = sort.sortProperty.replace("-", "");
+      const order = sort.sortProperty.includes("-") ? "asc" : "desc";
+      const category = categoryId === 0 ? `` : `&category=${categoryId}`;
+      const search = searchValue ? `&search=${searchValue}` : "";
 
-    useEffect(() => {
+      dispatch(
+        fetchPizzas({
+          search,
+          currentPage: String(currentPage),
+          sortBy,
+          order,
+          category,
+        })
+      );
 
-        const getPizzas = () => {
+      window.scrollTo(0, 0);
+    };
 
-            const sortBy = sort.sortProperty.replace('-', '');
-            const order = sort.sortProperty.includes('-') ? 'asc' : 'desc';
-            const category = categoryId === 0 ? `` : `&category=${categoryId}`;
-            const search = searchValue ? `&search=${searchValue}` : '';
+    getPizzas();
+  }, [categoryId, sort.sortProperty, searchValue, currentPage]);
 
-            dispatch(
-                fetchPizzas({
-                    search,
-                    currentPage: String(currentPage),
-                    sortBy,
-                    order,
-                    category
-                })
-            );
+  const skeletons = [...new Array(6)].map((_, index) => (
+    <Skeleton key={index} />
+  ));
 
-            window.scrollTo(0, 0);
-        };
+  const pizzas = items.map((obj: any) => <PizzaCard key={obj.id} {...obj} />);
 
-        getPizzas();
-    }, [categoryId, sort.sortProperty, searchValue, currentPage]);
-
-    const skeletons = [...new Array(6)].map((_, index) => <Skeleton key={index}/>);
-    const pizzas = items.map((obj: any) => <PizzaCard key={obj.id} {...obj} />);
-
-
-    return (
-        <div className={s.pizzaFragment}>
-            {
-                status === 'loading'
-                    ? <>
-                        <h2>All pizzas</h2>
-                        <div className={s.contentWrapper}>
-                            <div className={s.content}>{skeletons}</div>
-                        </div>
-                    </>
-                    : items.length === 0 ? <NotFoundBlock/>
-                        : <>
-                            <h2>All pizzas</h2>
-                            <div className={s.contentWrapper}>
-                                <div className={s.content}>{pizzas}</div>
-                            </div>
-                        </>
-            }
-        </div>
-    );
-}
+  return (
+    <div className={s.pizzaFragment}>
+      {status === "loading" ? (
+        <>
+          <h2>All pizzas</h2>
+          <div className={s.contentWrapper}>
+            <div className={s.content}>{skeletons}</div>
+          </div>
+        </>
+      ) : items.length === 0 ? (
+        <NotFoundBlock />
+      ) : (
+        <>
+          <h2>All pizzas</h2>
+          <div className={s.contentWrapper}>
+            <div className={s.content}>{pizzas}</div>
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
 
 export default PizzaItems;
