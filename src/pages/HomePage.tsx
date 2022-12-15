@@ -18,9 +18,12 @@ const HomePage: React.FC = () => {
   const { status } = useSelector(pizzaSelector);
   const { categoryId } = useSelector(filterSelector);
 
-  const categoriesHandler = useCallback((index: number) => {
-    dispatch(setCategoryId(index));
-  }, []);
+  const categoriesHandler = useCallback(
+    (index: number) => {
+      dispatch(setCategoryId(index));
+    },
+    [dispatch]
+  );
 
   const sortPopupHandler = useCallback(
     (obj: TSortItem) => {

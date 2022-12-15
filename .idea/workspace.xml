@@ -2,46 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c621645-4a48-4f65-9091-9be318ce352f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/@types/assets.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/@types/assets.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/Cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cart/cart.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/cart.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CartItem/CartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartItem/CartItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CartItem/cartItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartItem/cartItem.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Categories/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories/Categories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Categories/categories.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories/categories.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EmptyItems/EmptyItems.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EmptyItems/EmptyItems.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EmptyItems/EmptyItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EmptyItems/EmptyItems.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotFoundBlock/NotFoundBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotFoundBlock/NotFoundBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotFoundBlock/notFoundBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotFoundBlock/notFoundBlock.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/PaginationCmp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/PaginationCmp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/pagination.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/pagination.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PizzaCard/PizzaCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaCard/PizzaCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PizzaCard/pizzaCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaCard/pizzaCard.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PizzaItems/PizzaItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaItems/PizzaItems.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PizzaItems/pizzaItems.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaItems/pizzaItems.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/search.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/search.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Skeleton/Skeleton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Skeleton/Skeleton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SortPopup/SortPopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SortPopup/SortPopup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SortPopup/sortPopup.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SortPopup/sortPopup.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/MainLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CartPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ErrorPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ErrorPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/filterSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/filterSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/pizzaSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/pizzaSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/getItemsFromLS.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getItemsFromLS.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,9 +40,13 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/MI/WebstormProjects/hotel",
     "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "nodejs_package_manager_path": "yarn",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\MI\\AppData\\Roaming\\npm\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
     "ts.external.directory.path": "C:\\Users\\MI\\WebstormProjects\\react-pizza\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -114,7 +81,7 @@
       <workItem from="1670107067642" duration="13351000" />
       <workItem from="1670322105481" duration="1350000" />
       <workItem from="1670576553152" duration="1856000" />
-      <workItem from="1671031091935" duration="4333000" />
+      <workItem from="1671031091935" duration="6424000" />
     </task>
     <servers />
   </component>
