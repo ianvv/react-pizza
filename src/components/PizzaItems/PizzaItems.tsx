@@ -37,7 +37,7 @@ const PizzaItems: React.FC = () => {
     };
 
     getPizzas();
-  }, [categoryId, sort.sortProperty, searchValue, currentPage]);
+  }, [categoryId, sort.sortProperty, searchValue, currentPage, dispatch]);
 
   const skeletons = [...new Array(6)].map((_, index) => (
     <Skeleton key={index} />

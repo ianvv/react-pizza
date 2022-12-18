@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { AiOutlineSearch } from "react-icons/ai";
 import { IoCloseOutline } from "react-icons/io5";
@@ -12,17 +12,18 @@ const Search: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const dispatch = useDispatch();
 
-  const updateSearchValue = useCallback(
-    debounce((event) => {
-      dispatch(setSearchValue(event.target.value));
-    }, 1000),
-    []
+  const debouncedSearch = useMemo(
+    () => debounce((value: string) => dispatch(setSearchValue(value)), 1000),
+    [dispatch]
   );
 
-  const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
-    updateSearchValue(event);
-  };
+  const onChangeInput = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      setValue(event.target.value);
+      debouncedSearch(event.target.value);
+    },
+    [debouncedSearch]
+  );
 
   const onClearHandler = () => {
     dispatch(setSearchValue(""));

@@ -25,7 +25,7 @@ const Header: React.FC = () => {
       localStorage.setItem("totalPrice", totalPriceStr);
     }
     isMounted.current = true;
-  }, [items]);
+  }, [items, totalCount, totalPrice]);
 
   return (
     <div className={s.headerWrapper}>

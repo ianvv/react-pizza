@@ -14,7 +14,7 @@ const EmptyItems: React.FC<IEmptyItemsProps> = ({ title, subtitle }) => {
       <div className={s.emptyItems}>
         <h1>{title}</h1>
         <p>{subtitle}</p>
-        <img src={emptyCart} alt="empty item image" />
+        <img src={emptyCart} alt="empty item" />
       </div>
     </div>
   );
