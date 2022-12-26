@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c621645-4a48-4f65-9091-9be318ce352f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/UiKit/DialogConfirm/DialogConfirm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UiKit/DialogConfirm/Layout/Layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UiKit/DialogConfirm/Layout/animation.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UiKit/DialogConfirm/Layout/const.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UiKit/DialogConfirm/Layout/styles.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UiKit/DialogConfirm/hooks/useMount.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UiKit/Portal/Portal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/Cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CartItem/CartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartItem/CartItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SortPopup/SortPopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SortPopup/SortPopup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UiKit/DialogConfirm/Layout/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/UiKit/DialogConfirm/Layout/styles.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +90,7 @@
       <workItem from="1671031091935" duration="7688000" />
       <workItem from="1671362119681" duration="4267000" />
       <workItem from="1671379297164" duration="2348000" />
-      <workItem from="1672001978762" duration="18405000" />
+      <workItem from="1672001978762" duration="20677000" />
     </task>
     <servers />
   </component>
