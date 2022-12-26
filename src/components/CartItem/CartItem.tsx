@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
@@ -9,6 +9,7 @@ import {
   removeItem,
   cartItemByIdSelector,
 } from "../../redux/slices/cartSlice";
+import DialogConfirm from "../../UiKit/DialogConfirm/DialogConfirm";
 import s from "./cartItem.module.scss";
 
 interface ICartItemProps {
@@ -22,6 +23,8 @@ interface ICartItemProps {
 
 export const CartItem: React.FC<ICartItemProps> = (cartItemObject) => {
   const { id, name, price, imageUrl, type, size } = cartItemObject;
+
+  const [opened, setOpened] = useState(false);
 
   const dispatch = useDispatch();
   const count = useSelector(cartItemByIdSelector(id))?.count;
@@ -57,7 +60,14 @@ export const CartItem: React.FC<ICartItemProps> = (cartItemObject) => {
           </button>
         </div>
         <div className={s.price}>{count && count * price}$</div>
-        <button className={s.remove} onClick={() => dispatch(removeItem(id))}>
+        <button className={s.remove} onClick={() => setOpened(!opened)}>
+          <DialogConfirm
+            dispatchCallback={() => dispatch(removeItem(id))}
+            opened={opened}
+            onClose={() => setOpened(false)}
+          >
+            <h3>Are you sure you want to remove this item?</h3>
+          </DialogConfirm>
           <TiDeleteOutline size={34} />
         </button>
       </div>

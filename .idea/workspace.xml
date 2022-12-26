@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c621645-4a48-4f65-9091-9be318ce352f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/UiKit/DialogConfirm/DialogConfirm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UiKit/DialogConfirm/Layout/Layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UiKit/DialogConfirm/Layout/animation.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UiKit/DialogConfirm/Layout/const.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UiKit/DialogConfirm/Layout/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UiKit/DialogConfirm/hooks/useMount.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UiKit/Portal/Portal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EmptyItems/EmptyItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EmptyItems/EmptyItems.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PizzaItems/PizzaItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaItems/PizzaItems.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/Cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CartItem/CartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartItem/CartItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SortPopup/SortPopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SortPopup/SortPopup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript JSX File" />
+        <option value="JavaScript File" />
         <option value="SCSS File" />
       </list>
     </option>
@@ -28,7 +39,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2G1pTqxztoEVXN9IMWU1UKneWK8" />
   <component name="ProjectViewState">
@@ -40,7 +51,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/MI/WebstormProjects/hotel",
+    "last_opened_file_path": "C:/Users/MI/WebstormProjects/react-pizza/src/UiKit/DialogConfirm",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -55,11 +66,16 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MI\WebstormProjects\react-pizza\src\UiKit\DialogConfirm" />
+      <recent name="C:\Users\MI\WebstormProjects\react-pizza\src\UiKit\MyOwnPopup" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MI\WebstormProjects\react-pizza\src\UiKit\MyOwnPopup\Layout" />
+      <recent name="C:\Users\MI\WebstormProjects\react-pizza\src\UiKit\MyOwnPopup\hooks" />
+      <recent name="C:\Users\MI\WebstormProjects\react-pizza\src\UiKit\ModalWindow" />
       <recent name="C:\Users\MI\WebstormProjects\react-pizza\src\components\Skeleton" />
       <recent name="C:\Users\MI\WebstormProjects\react-pizza\src\components\SortPopup" />
-      <recent name="C:\Users\MI\WebstormProjects\react-pizza\src\components\CartItem" />
-      <recent name="C:\Users\MI\WebstormProjects\react-pizza\src\components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -85,7 +101,9 @@
       <workItem from="1670322105481" duration="1350000" />
       <workItem from="1670576553152" duration="1856000" />
       <workItem from="1671031091935" duration="7688000" />
-      <workItem from="1671362119681" duration="4197000" />
+      <workItem from="1671362119681" duration="4267000" />
+      <workItem from="1671379297164" duration="2348000" />
+      <workItem from="1672001978762" duration="18405000" />
     </task>
     <servers />
   </component>

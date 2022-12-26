@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import MainLayout from "./layouts/MainLayout";
 import CartPage from "./pages/CartPage";
 import ErrorPage from "./pages/ErrorPage";
+
 import "./assets/styles/app.scss";
 
 type TRouteItem = RouteObject;

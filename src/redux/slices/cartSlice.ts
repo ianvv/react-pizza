@@ -68,19 +68,15 @@ const cartSlice = createSlice({
         (obj) => obj.id === action.payload
       );
 
-      if (window.confirm("Are you sure you want to remove this item?")) {
-        state.items = state.items.filter((obj) => obj.id !== findItem.id);
-        state.totalPrice = state.totalPrice - findItem.price * findItem.count;
-        state.totalCount = state.totalCount - findItem.count;
-      }
+      state.items = state.items.filter((obj) => obj.id !== findItem.id);
+      state.totalPrice = state.totalPrice - findItem.price * findItem.count;
+      state.totalCount = state.totalCount - findItem.count;
     },
     clearItems(state) {
       if (state.items.length > 0) {
-        if (window.confirm("Are you sure you want to clear the basket?")) {
-          state.items = [];
-          state.totalPrice = 0;
-          state.totalCount = 0;
-        }
+        state.items = [];
+        state.totalPrice = 0;
+        state.totalCount = 0;
       }
     },
   },

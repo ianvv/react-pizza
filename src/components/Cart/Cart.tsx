@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { IoTrashOutline } from "react-icons/io5";
@@ -8,11 +8,13 @@ import { IoIosArrowBack } from "react-icons/io";
 import EmptyItems from "../EmptyItems/EmptyItems";
 import { CartItem } from "../CartItem/CartItem";
 import { cartSelector, clearItems } from "../../redux/slices/cartSlice";
+import DialogConfirm from "../../UiKit/DialogConfirm/DialogConfirm";
 import s from "./cart.module.scss";
 
 const Cart: React.FC = () => {
   const { items, totalCount, totalPrice } = useSelector(cartSelector);
   const dispatch = useDispatch();
+  const [opened, setOpened] = useState(false);
 
   return (
     <div className={s.cartWrapper}>
@@ -22,7 +24,14 @@ const Cart: React.FC = () => {
             <div className={s.leftSide}>
               <BsCart3 size={28} /> Cart
             </div>
-            <div className={s.rightSide} onClick={() => dispatch(clearItems())}>
+            <div className={s.rightSide} onClick={() => setOpened(!opened)}>
+              <DialogConfirm
+                dispatchCallback={() => dispatch(clearItems())}
+                opened={opened}
+                onClose={() => setOpened(false)}
+              >
+                <h3>Are you sure you want to clear the basket?</h3>
+              </DialogConfirm>
               <div className={s.trash}>
                 <IoTrashOutline />
               </div>

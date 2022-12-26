@@ -18,7 +18,7 @@ export const sortItems: TSortItem[] = [
   { name: "alphabet (asc)", sortProperty: ESortPropertyEnum.NAME_ASC },
 ];
 
-type SortClick = MouseEvent & {
+type TSortClick = MouseEvent & {
   path: Node[];
 };
 
@@ -34,7 +34,7 @@ export const SortPopup: React.FC<ISortPopupProps> = memo(
 
     useEffect(() => {
       const handleClickOutside = (event: MouseEvent) => {
-        const _event = event as SortClick;
+        const _event = event as TSortClick;
 
         if (sortRef.current && !_event.path.includes(sortRef.current)) {
           setMenu(false);
